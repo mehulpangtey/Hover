@@ -1,0 +1,727 @@
+/*
++      o     +              o   
+    +             o     +       +
+o          +
+    o  +           +        +
++        o     o       +        o
+-_-_-_-_-_-_-_,------,      o 
+_-_-_-_-_-_-_-|   /\_/\  
+-_-_-_-_-_-_-~|__( ^ .^)  +     +  
+_-_-_-_-_-_-_-""  ""      
++      o         o   +       o
+    +         +
+o        o         o      o     +
+    o           +
++      +     o        o      +    
+
+Nyan, Nyan
+*/
+
+
+@font-face {
+    font-family: 'BertholdAkzidenzGroteskBEBdCn';
+    src: url('../fonts/akzgbebc-webfont.eot');
+    src: url('../fonts/akzgbebc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/akzgbebc-webfont.woff') format('woff'),
+         url('../fonts/akzgbebc-webfont.ttf') format('truetype'),
+         url('../fonts/akzgbebc-webfont.svg#BertholdAkzidenzGroteskBEBdCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+	height:					100%;
+}
+
+a {
+	outline:				none;
+}
+
+body {
+	height:					100%;
+	overflow-x:				hidden;
+	background:				url(../images/bg-body.gif) repeat left top;
+	border-top:				2px solid #000;
+}
+
+h2 {
+	margin:					0 0 20px 0;
+	font-family:			BertholdAkzidenzGroteskBEBdCn, 'Arial Black', Arial, sans-serif; 
+	font-size:				31px;
+	line-height:			28px;
+	font-weight:			bold; 
+	font-style:				normal;
+	text-align:				center;
+	text-transform:			uppercase;
+	color:					#000;
+}
+
+h2.year {
+	padding-top:			20px;
+}
+
+h2.year a,
+h3.title a {
+	cursor:					pointer;
+	display:				inline-block;
+	overflow:				hidden;
+	width:					24px;
+	height:					24px;
+	text-indent:			-9999px;
+	background:				url(../images/Btn_BackToTop.png) no-repeat left top;
+}
+
+h3.title a.inactive {
+	background-image:		url(../images/btn-bottom.png);
+}
+
+h2.year a:hover,
+h3.title a:hover {
+	background-position:	0 -24px;
+}
+
+p {
+	font:					11px/17px Verdana, Geneva, sans-serif;
+	color:					#333;
+}
+
+a,
+a * {
+	cursor:					pointer;	
+}
+
+.cursor {
+	position:				absolute;
+	display:				none;
+	width:					100px;
+	height:					117px;
+	margin:					5px 0 0 5px;
+	background:				url(../images/Cursor3.png) no-repeat left top;
+	z-index:				9999;
+}
+
+::selection, 
+::-moz-selection 			{ background: #CCC; }
+
+.clear {
+	clear:					both;
+	height:					0;
+	font:					0/0 serif;
+}
+
+.floatLeft					{ float: left !important; }
+.floatRight					{ float: right !important; }
+
+
+
+/* Header */
+header#header {
+	position:				relative;
+	margin-top:				20px;
+	text-align:				center;
+}
+
+header#header h1,
+header#header h1 a {
+	display:				block;
+	width:					790px;
+	height:					135px;
+	margin:					0 auto;
+	z-index:				1;
+}
+
+header#header h1 a {
+	text-indent:			-9999px;
+	background:				url(../images/header.png) no-repeat left top;
+}
+
+header#header nav ul {
+	margin-left:			5px;
+	margin-top:				10px;
+	display:				inline-block;
+	text-align:				center;
+}
+
+a.nav {
+	position:				absolute;
+	top:					170px;
+	font:					21px/30px BertholdAkzidenzGroteskBEBdCn,'Arial Black',Arial,sans-serif;
+	text-transform:			uppercase;
+	text-decoration:		none;
+	color:					#666;
+}
+
+a.nav-right {
+	right:					20px;
+}
+
+a.nav-left {
+	left:					20px;
+}
+
+header#header nav ul li {
+	float:					left;
+	display:				inline-block;
+	margin:					0 10px 0 0;
+}
+
+header#header nav ul li a {
+	font:					21px/30px BertholdAkzidenzGroteskBEBdCn,'Arial Black',Arial,sans-serif;
+	text-transform:			uppercase;
+	text-decoration:		none;
+	color:					#666;
+}
+
+header#header nav ul li a:hover {
+	color:					#CCC;
+}
+
+header#header nav ul li a.size,
+header#header nav ul li a.home,
+header#header nav ul li a.btn-info,
+header#header nav ul li a.btn-scrollbottom {
+	display:				block;
+	width:					30px;
+	height:					30px;
+	margin-top:				0;
+	text-align:				left;
+	text-indent:			-9999px;
+	background:				url(../images/buttons.png) no-repeat 0 0;
+}
+
+header#header nav ul li a.size { background-position: -30px 0; }
+header#header nav ul li a.sized { background-position: 0 0; }
+header#header nav ul li a.home { background-position: -90px 0; }
+header#header nav ul li a.btn-info { background-position: -60px 0; }
+header#header nav ul li a.btn-scrollbottom { background-position: -60px 0; }
+
+header#header nav ul li a.info,
+header#header nav ul li a.link {
+	font-size:					20px;
+	color:						#999;
+	text-transform:				uppercase;
+}
+header#header nav ul li a.info:hover,
+header#header nav ul li a.link:hover {
+	color:						#CCC;
+}
+
+header#header nav ul li a.size:hover { background-position: -30px -30px; }
+header#header nav ul li a.sized:hover { background-position: 0 -30px; }
+header#header nav ul li a.home:hover { background-position: -90px -30px; }
+header#header nav ul li a.btn-info:hover { background-position: -60px -30px; }
+header#header nav ul li a.btn-scrollbottom:hover { background-position: -60px -30px; }
+
+
+
+/* About */
+#about {
+	position:				relative;
+	overflow:				hidden;
+	display:				block;
+	width:					900px;
+	height:					0;
+	margin:					0 auto;
+}
+
+#about div.wrapper {
+	position:				absolute;
+	left:					0;
+	top:					0;
+	width:					900px;
+	padding-top:			30px;
+}
+
+#about div.left {
+	float:					left;
+	width:					440px;
+}
+
+#about div.right {
+	float:					right;
+	width:					440px;
+}
+
+#about p {
+	margin:					0 0 10px 0;
+	font:					italic 21px/27px Georgia, "Times New Roman", Times, serif;
+	color:					#666;
+}
+
+#about div.wrapper p {
+	font:					italic 13px/24px Georgia, "Times New Roman", Times, serif;
+	text-align:				left;
+}
+
+#about .socialbuttons li {
+	float:					left;
+	display:				inline-block;
+	margin:					0 15px 0 0;
+}
+
+#about .socialbuttons li a {
+	display:				block;
+	overflow:				hidden;
+	width:					23px;
+	height:					23px;
+	text-indent:			-9999px;
+	text-decoration:		none;
+}
+
+#about .socialbuttons li a:hover {
+	background-position:	0 -23px;
+}
+
+#about .socialbuttons li a.facebook 	{ background-image: url(../images/Btn_Social_FB.png); }
+#about .socialbuttons li a.youtube 		{ background-image: url(../images/Btn_Social_YT.png); }
+#about .socialbuttons li a.deviant 		{ background-image: url(../images/Btn_Social_DA.png); }
+#about .socialbuttons li a.behance 		{ background-image: url(../images/Btn_Social_BE.png); }
+#about .socialbuttons li a.mail 		{ background-image: url(../images/Btn_Social_MA.png); }
+
+
+
+/* Wrapper */
+#wrapper {
+	width:					250px;
+	margin:					0 auto;
+	z-index:				2;
+}
+
+.wrapper {
+	width:					100%;
+	text-align:				center;
+	background:				url(../images/bg-body.gif) repeat left top;
+}
+
+
+
+/* Content */
+
+#content {
+	width:					940px;
+	margin:					0 auto;
+}
+
+.about {
+	width:					500px;
+	margin:					0 auto;
+	font:					italic 16px/1.3em Georgia, "Times New Roman", Times, serif;
+	text-align:				center;
+	color:					#999;
+}
+
+.about a {
+	color:					#CC0000;
+}
+
+#content .row {
+	margin:					0 0 20px 0;
+}
+
+#content .col {
+	float:					left;
+	width:					300px;
+	margin:					0 20px 0 0;
+}
+
+#content .col .title-wrapper {
+	position:				relative;
+	width:					300px;
+	height:					80px;
+}
+
+#content .col .title-wrapper h2 {
+	position:				absolute;
+	bottom:					0;
+	left:					0;
+	width:					300px;
+}
+
+#content .col-last {
+	margin-right:			0;
+}
+
+
+
+/* Items */
+.item {
+	position:				relative;
+	width:					250px;
+	height:					250px;
+	padding:				5px;
+	margin:					0 auto 50px auto;
+	border:					1px solid #CCC;
+}
+
+.item .painting,
+.item a.expand {
+	display:				block;
+	width:					250px;
+	height:					250px;
+	position:				absolute;
+	left:					5px;
+	top:					5px;
+}
+
+.item .painting {
+	overflow:				hidden;
+	background:				#E0E0E0;
+}
+
+.item .painting img {
+	position:				absolute;
+	left:					-250px;
+	top:					-250px;
+	width:					750px;
+	height:					750px;
+}
+
+.item .painting img.loader {
+	display:				block;
+	left:					50%;
+	top:					50%;
+	width:					31px;
+	height:					31px;
+	margin:					-16px 0 0 -16px;
+}
+
+.item a.expand {
+	position:				relative;
+	left:					0;
+	top:					0;
+	background:				url(../images/trans.gif) repeat left top;
+}
+
+.item a.expand .block {
+	position:				absolute;
+}
+
+.item a.expand .neg-1 		{ transform: rotate(-1deg); -moz-transform: rotate(-1deg); -webkit-transform: rotate(-1deg); }
+.item a.expand .neg-2 		{ transform: rotate(-2deg); -moz-transform: rotate(-2deg); -webkit-transform: rotate(-2deg); }
+.item a.expand .neg-3 		{ transform: rotate(-3deg); -moz-transform: rotate(-3deg); -webkit-transform: rotate(-3deg); }
+.item a.expand .pos-1 		{ transform: rotate(3deg); -moz-transform: rotate(1deg); -webkit-transform: rotate(1deg); }
+.item a.expand .pos-2 		{ transform: rotate(3deg); -moz-transform: rotate(2deg); -webkit-transform: rotate(2deg); }
+.item a.expand .pos-3 		{ transform: rotate(3deg); -moz-transform: rotate(3deg); -webkit-transform: rotate(3deg); }
+
+.item a.expand:hover,
+.item a.expand:active,
+.item a.cursored {
+	cursor: 				url(../images/trans.cur), none;
+}
+
+
+
+/* Painting */
+#painting {
+	position:				relative;
+	margin-top:				10px;
+}
+
+#painting #image {
+	cursor:					pointer;
+}
+
+#painting .loader {
+	position:				absolute;
+	left:					50%;
+	top:					100px;
+	margin:					0 0 0 -16px;
+}
+
+a.overview {
+	position:				absolute;
+	left:					0;
+	top:					163px;
+	display:				inline-block;
+	display:				none;
+	padding:				5px;
+	background:				#000;
+	font:					italic 13px Georgia, "Times New Roman", Times, serif;
+	text-decoration:		none;
+	color:					#FFF;
+	z-index:				9;
+}	
+
+#image {
+	margin-left:			auto;
+	margin-right:			auto;
+}
+
+#painting .painting-wrapper {
+	overflow:				hidden;
+}
+
+#painting .painting-wrapper img {
+	display:				block;
+}
+
+#painting .info {
+	position:				relative;
+	overflow:				hidden;
+	padding:				20px;
+	background:				#000;
+	z-index:				99;
+}
+
+#painting .info .title {
+	background:				#000;
+	font-family:			BertholdAkzidenzGroteskBEBdCn, 'Arial Black', Arial, sans-serif; 
+	font-size:				40px;
+	text-align:				center;
+	text-transform:			uppercase;
+	color:					#FFF;
+	z-index:				9;
+}
+
+#painting .info h4 {
+	margin:					20px 0 30px 0;
+	font:					italic 16px/1.3em Georgia, "Times New Roman", Times, serif;
+	text-align:				center;
+	color:					#999;
+}
+
+#painting .info .titleActive {
+	position:				absolute;
+	top:					30px;
+}
+
+
+
+/* Carousel */
+#carousel {
+	position:				relative;
+	width:					520px;
+	margin:					0 auto;
+	overflow:				visible;
+}
+
+#carousel .thumbnails {
+	overflow:				visible;
+	margin-top:				15px;
+}
+
+#carousel .thumbnails a.btn {
+	position:				absolute;
+	top:					35px;
+	overflow:				hidden;
+	display:				block;
+	width:					12px;
+	height:					15px;
+	margin-top:				-7px;
+	text-indent:			-9999px;
+	background:				url(../images/buttons_carrousel.png) no-repeat -12px -15px;
+	z-index:				9999;
+}
+
+#carousel .thumbnails a.previous {
+	left:					-30px;
+	background-position:	0 -15px;
+}
+
+#carousel .thumbnails a.next {
+	right:					-30px;
+}
+
+#carousel .thumbnails a.previous:hover {
+	background-position:	0 0;
+}
+
+#carousel .thumbnails a.next:hover {
+	background-position:	-12px 0;
+}
+
+#carousel .thumbnails .carousel {
+	overflow:				hidden;
+	margin:					0 0 10px 0;
+}
+
+#carousel .thumbnails .carousel ul {
+	width:					999999px;
+}
+
+#carousel .thumbnails .carousel ul li {
+	float:					left;
+	display:				block;
+	width:					120px;
+	height:					75px;
+	margin:					0 12px 0 0;
+}
+
+#carousel .thumbnails .carousel ul li a {
+	display:				inline-block;
+	clear:					both;
+}
+
+#carousel .thumbnails .carousel ul li a img {
+	display:				block;
+	width:					120px;
+	height:					70px;
+	border:					1px solid #000;
+}
+
+#carousel .thumbnails .carousel ul li a.active img {
+	border-color:			#FFF;
+}
+
+#carousel .thumbnails .carousel ul li a.video {
+	position:				relative;
+}
+
+#carousel .thumbnails .carousel ul li a.video span {
+	position:				absolute;
+	left:					1px;
+	top:					1px;
+	width:					120px;
+	height:					70px;
+	background:				url(../images/Btn_Play.png) no-repeat center center;
+}
+
+
+/* Shows */
+.show {
+	margin:					30px 0 60px;
+}
+
+.show h2 {
+	margin-bottom:			0;
+}
+
+.show time {
+	display:				block;
+	margin-bottom:			10px;
+	font:					italic 14px Georgia, "Times New Roman", Times, serif;
+	color:					#999;
+}
+
+.show .text {
+	width:					450px;
+	margin:					20px auto;
+	overflow:				hidden;
+}
+
+.show .text figure {
+	float:					left;
+	display:				block;
+	width:					100px;
+}
+
+.show .text .details {
+	float:					right;
+	width:					330px;
+	text-align:				left;
+	font:					italic 13px/18px Georgia, "Times New Roman", Times, serif;
+	color:					#666;
+}
+
+.show .text .details p {
+	font:					italic 13px/18px Georgia, "Times New Roman", Times, serif;
+	color:					#666;
+	margin:					0 0 15px 0;
+}
+
+.show .text .details a {
+	color:					#333;
+	text-decoration:		underline;
+}
+
+
+/* Footer */
+footer {
+	position:				relative;
+	display:				none;
+	height:					100px;
+	margin:					150px 20px 0 0;
+}
+
+.page-index footer {
+	display:				block;
+}
+
+footer a.skaffa {
+	float:					right;
+	overflow:				hidden;
+	display:				block;
+	width:					56px;
+	height:					27px;
+	text-indent:			-9999px;
+	background:				url(../images/footer.gif) no-repeat left top;
+}
+
+footer .paginator {
+	width:					300px;
+	margin:					0 auto;
+}
+
+footer .paginator a {
+	font:					italic 13px Georgia, "Times New Roman", Times, serif;
+	letter-spacing:			0.01em;
+	text-decoration:		none;
+	color:					#666;
+}
+
+footer .paginator a:hover {
+	text-decoration:		underline;
+}
+
+
+
+/* Unicorn */
+#hipster {
+	overflow:				hidden;
+	position:				absolute;
+	left:					0;
+	bottom:					0;
+	width:					0;
+	height:					400px;
+	background:				url(../images/Nyan4_transparant.gif) no-repeat right top;
+	z-index:				9;
+}
+
+#hipster .unicorn {
+	display:				block;
+	height:					400px;
+}
+
+#nyangif {
+	display:				block;
+	width:					0;
+	height:					300px;
+	background:				url(../images/Nyan4_transparant.gif) no-repeat right bottom;
+}
+
+.nyanwrap { 
+	width:					420px;
+	margin:					0 auto;
+}
+
+.nyanwrap h2 {
+	margin:					0 0 20px 0;
+}
+
+.nyanwrap h2 span {
+	display:				block;
+	font:					italic 14px Georgia, "Times New Roman", Times, serif;
+	text-transform:			none;
+	color:					#999;
+} 
+
+.nyanwrap p {
+	margin:					0 0 20px 0;
+	font:					italic 13px/24px Georgia, "Times New Roman", Times, serif;
+	color:					#666;
+}
+
+.nyanwrap p a {
+	color:					#666;
+}
+
+.nyanwrap div.share {
+	margin:					40px 0 20px 0;
+}
+
+/* Page classes */
+.page-painting #footer,
+.page-painting #hipster {
+	display:				none;
+}
